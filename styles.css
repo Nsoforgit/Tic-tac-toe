@@ -1,0 +1,243 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.welcome-container, .form-container, .game-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+#nextRoundButton, #quitButton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #nextRoundButton:hover, #quitButton:hover {
+    background-color: #0056b3;
+  }
+
+  #currentPlayerIndicator {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  #message {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  */
+
+
+
+
+  /* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Welcome Page */
+.welcome-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Form Container */
+.form-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Game Container */
+.game-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#scoreBoard {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  cursor: pointer;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #dcdfe1;
+}
+
+#currentPlayerIndicator {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#message {
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+
+/* Winning cell styles */
+.player-win {
+  background-color: #2ecc71; /* Green for player */
+  color: white;
+  border: 2px solid #27ae60; /* Darker green border */
+}
+
+.computer-win {
+  background-color: #3498db; /* Blue for computer */
+  color: white;
+  border: 2px solid #2980b9; /* Darker blue border */
+}
+
+/* blinking */
+
+.highlight {
+    opacity: 0.5; /* Blinking effect */
+}
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .welcome-container, .form-container, .game-container {
+      width: 90%;
+  }
+
+  .cell {
+      width: 80px;
+      height: 80px;
+      font-size: 1.5em;
+  }
+}
+
+
